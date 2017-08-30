@@ -6,24 +6,25 @@ var aboutOverlay = document.getElementById('js-aboutOverlay'),
     overlayAbout = document.getElementsByClassName('overlay-about'),
     overlayProject = document.getElementsByClassName('overlay-project'),
     overlayCV = document.getElementsByClassName('overlay-cv'),
-    overlaySocial = document.getElementsByClassName('overlay-social');
+    overlaySocial = document.getElementsByClassName('overlay-social'),
+    overlayHomeHeader = document.getElementById('js-overlayHomeHeader'),
+    overlayHomeList = document.getElementById('js-overlayHomeList');
 
-
-aboutOverlay.addEventListener('click', function() {menuStateChoose('about'); });
-projectOverlay.addEventListener('click', function() {menuStateChoose('project'); });
-cvOverlay.addEventListener('click', function() {menuStateChoose('cv'); });
-socialOverlay.addEventListener('click', function() {menuStateChoose('social'); });
+aboutOverlay.addEventListener('click', function () { menuStateChoose('about'); });
+projectOverlay.addEventListener('click', function () { menuStateChoose('project'); });
+cvOverlay.addEventListener('click', function () { menuStateChoose('cv'); });
+socialOverlay.addEventListener('click', function () { menuStateChoose('social'); });
 
 function menuStateChoose(e) {
     menuState = e;
     console.log(e);
-    setMenuState();    
+    setMenuState();
 }
 
 var menuState = 'home';
 
 function setMenuState() {
-    switch(menuState) {
+    switch (menuState) {
         case 'about':
             overlayHome[0].style.display = 'none';
             overlayAbout[0].style.display = 'block';
@@ -46,15 +47,15 @@ function setMenuState() {
             overlaySocial[0].style.display = 'none';
             break;
         case 'social':
-            overlayHome[0].style.display = 'none';
+            overlayHomeHeader.style.display = 'none';
             overlayAbout[0].style.display = 'none';
             overlayProject[0].style.display = 'none';
             overlayCV[0].style.display = 'none';
             overlaySocial[0].style.display = 'block';
-           break;
+            break;
         case 'home':
         default:
-            overlayHome[0].style.display = 'block';
+            overlayHomeHeader.style.display = 'block';
             overlayAbout[0].style.display = 'none';
             overlayProject[0].style.display = 'none';
             overlayCV[0].style.display = 'none';
