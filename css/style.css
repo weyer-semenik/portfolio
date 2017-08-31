@@ -151,9 +151,9 @@ body {
       margin: 0px;
       padding: 0px; }
     .wrapper .overlay-social .set1 {
-      top: 40%; }
+      top: 10%; }
     .wrapper .overlay-social .set2 {
-      top: 60%; }
+      top: 80%; }
     .wrapper .overlay-social a {
       display: inline-block;
       text-decoration: none;
@@ -204,5 +204,9 @@ body {
       transform: translate3d(0, 0, 0);
       opacity: 1;
       filter: alpha(opacity=100); }
+    .wrapper .overlay-social:hover .set1 {
+      top: 40%; }
+    .wrapper .overlay-social:hover .set2 {
+      top: 60%; }
 
 /*# sourceMappingURL=style.css.map */

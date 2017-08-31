@@ -26,21 +26,21 @@ var menuState = 'home';
 function setMenuState() {
     switch (menuState) {
         case 'about':
-            overlayHome[0].style.display = 'none';
+            overlayHomeHeader.style.display = 'none';
             overlayAbout[0].style.display = 'block';
             overlayProject[0].style.display = 'none';
             overlayCV[0].style.display = 'none';
             overlaySocial[0].style.display = 'none';
             break;
         case 'project':
-            overlayHome[0].style.display = 'none';
+            overlayHomeHeader.style.display = 'none';
             overlayAbout[0].style.display = 'none';
             overlayProject[0].style.display = 'block';
             overlayCV[0].style.display = 'none';
             overlaySocial[0].style.display = 'none';
             break;
         case 'cv':
-            overlayHome[0].style.display = 'none';
+            overlayHomeHeader.style.display = 'none';
             overlayAbout[0].style.display = 'none';
             overlayProject[0].style.display = 'none';
             overlayCV[0].style.display = 'block';
