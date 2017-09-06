@@ -1,4 +1,4 @@
-var aboutOverlay = document.getElementById('js-aboutOverlay'),
+const aboutOverlay = document.getElementById('js-aboutOverlay'),
     projectOverlay = document.getElementById('js-projectOverlay'),
     cvOverlay = document.getElementById('js-cvOverlay'),
     socialOverlay = document.getElementById('js-socialOverlay'),
@@ -10,16 +10,16 @@ var aboutOverlay = document.getElementById('js-aboutOverlay'),
     overlayHomeHeader = document.getElementById('js-overlayHomeHeader'),
     overlayHomeList = document.getElementById('js-overlayHomeList');
 
+function menuStateChoose(e) {
+        menuState = e;
+        console.log(e);
+        setMenuState();
+    }
+
 aboutOverlay.addEventListener('click', function () { menuStateChoose('about'); });
 projectOverlay.addEventListener('click', function () { menuStateChoose('project'); });
 cvOverlay.addEventListener('click', function () { menuStateChoose('cv'); });
 socialOverlay.addEventListener('click', function () { menuStateChoose('social'); });
-
-function menuStateChoose(e) {
-    menuState = e;
-    console.log(e);
-    setMenuState();
-}
 
 var menuState = 'home';
 
@@ -35,7 +35,7 @@ function setMenuState() {
         case 'project':
             overlayHomeHeader.style.display = 'none';
             overlayAbout[0].style.display = 'none';
-            overlayProject[0].style.display = 'block';
+            overlayProject[0].style.display = 'flex';
             overlayCV[0].style.display = 'none';
             overlaySocial[0].style.display = 'none';
             break;
